@@ -1,15 +1,5 @@
-name: Github Actions
-on:
-  # Trigger the workflow on push or pull request,
-  # but only for the main branch
-  push:
-    branches:
-      - main
-      - newBranch
-  pull_request:
-    branches:
-      - main
-      - newBranch
+name: Github Actions 101
+on: [push]
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
@@ -20,5 +10,13 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v2
-        with: 
-          start: npm run start
+        with:
+          record: true
+          parallel: true
+          group: Parallel 2x on ${{ matrix.os }}
+          # on Mac and Linux we can use "npm start"
+          start: npm start
+        env:
+          # pass the Dashboard record key as an environment variable
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_SECRET_KEY }}
+          COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
