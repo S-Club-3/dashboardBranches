@@ -10,5 +10,6 @@ workflows:
                   only:
                     - main
                     - newBranch
+                    - testBranch
           start: npm start
           record: true
