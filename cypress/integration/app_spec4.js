@@ -236,7 +236,7 @@ describe('TodoMVC - React', function () {
         .should('not.have.class', 'completed')
   
         cy.get('@todos')
-        .eq(15)
+        .eq(2)
         .should('not.have.class', 'completed')
       })
   

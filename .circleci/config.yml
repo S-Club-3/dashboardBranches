@@ -1,0 +1,14 @@
+version: 2.1
+orbs:
+  cypress: cypress-io/cypress@1
+workflows:
+  build:
+    jobs:
+      - cypress/run:
+          filters:
+                branches:
+                  only:
+                    - master
+                    - develop
+          start: npm start
+          record: true
