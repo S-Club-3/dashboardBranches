@@ -1,4 +1,4 @@
-name: Github Actions 101
+name: Github Actions
 on: [push]
 jobs:
   cypress-run:
