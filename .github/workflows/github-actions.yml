@@ -1,4 +1,4 @@
-name: Github Actions pull_request
+name: Github Actions
 on:
   # Trigger the workflow on push or pull request,
   # but only for the main branch
@@ -21,4 +21,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with: 
-          start: npm start
+          start: npm run start
