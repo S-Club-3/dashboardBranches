@@ -11,5 +11,6 @@ workflows:
                     - main
                     - newBranch
                     - testBranch
+                    - pushSame
           start: npm start
           record: true
