@@ -151,7 +151,7 @@ describe('TodoMVC - React', function () {
         cy.get('@todos')
         .eq(0)
         .find('label')
-        .should('contain', TODO_ITEM_ONE)
+        .should('contain', TODO_ITEM_ONES)
   
         cy.get('@todos')
         .eq(1)
