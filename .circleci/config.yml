@@ -8,6 +8,6 @@ workflows:
           filters:
                 branches:
                   only:
-                    - sameHash
+                    - noNewCommit
           start: npm start
           record: true
