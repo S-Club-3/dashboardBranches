@@ -8,6 +8,6 @@ workflows:
           filters:
                 branches:
                   only:
-                    - noNewCommit
+                    - failAndCancel
           start: npm start
           record: true
